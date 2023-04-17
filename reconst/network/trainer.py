@@ -60,7 +60,7 @@ class Trainer:
 
         self.data_loader = DataLoader(dataset=InstDataset(self.dataset),
                                       num_workers=args.threads,
-                                      batch_size=16,
+                                      batch_size=1,
                                       shuffle=True)
 
         self.camera_distance = 32

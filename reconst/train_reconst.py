@@ -7,7 +7,7 @@ from network.trainer import Trainer
 def get_args():
 
     parser = argparse.ArgumentParser(description='train leaf reconstruction from a RoI')
-    parser.add_argument('--gpu', type=str, default='0', help='ID of GPU (single GPU)')
+    parser.add_argument('--gpu', type=str, default='6', help='ID of GPU (single GPU)')
 
     parser.add_argument('--dataset', type=str, required=False, default='../../data/DenseLeaves/crop_leaf/test/crop_sam/001',help='dataset path (img/mask/seg)')
     parser.add_argument('--obj', type=str, required=False,default='../../data/DenseLeaves/synthetic/leaf.obj', help='initial object path')

@@ -11,15 +11,15 @@ def get_args():
     parser = argparse.ArgumentParser(description='test leaf reconstruction from a RoI')
     parser.add_argument('--gpu', type=str, default='6', help='ID of GPU (single GPU)')
 
-    parser.add_argument('--dataset', type=str, required=False, default='/home/yyang/projects/konishiike/code/segment/test/crop_sam/002',help='dataset path')
-    parser.add_argument('--obj', type=str, required=False,default='/home/yyang/projects/konishiike/data/synthetic/leaf.obj', help='path to the initial object (same object for training)')
+    parser.add_argument('--dataset', type=str, required=False, default='../../data/DenseLeaves/crop_leaf/test/crop_sam/001',help='dataset path')
+    parser.add_argument('--obj', type=str, required=False,default='../../data/DenseLeaves/synthetic/leaf.obj', help='path to the initial object (same object for training)')
     parser.add_argument('--base_x', type=int, default=1024,help='width of bush image')
     parser.add_argument('--base_y', type=int, default=768,help='height of bush image')
     parser.add_argument('--size', type=int,default=128,required=False)
     parser.add_argument('--threads', default=4, type=int, help='# threads for loading data')
 
     parser.add_argument('--save_dir', type=str, default='./test/', help='save result in this directory')
-    parser.add_argument('--checkpoint', type=str, required=False,default='/home/yyang/projects/konishiike/code/reconst/checkpoint/epoch47.pth', help='trained model path ')
+    parser.add_argument('--checkpoint', type=str, required=False,default='../../weights/checkpoint_leaf/epoch1.pth', help='trained model path ')
 
     args = parser.parse_args()
 
