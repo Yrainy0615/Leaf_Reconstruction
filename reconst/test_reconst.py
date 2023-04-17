@@ -18,7 +18,7 @@ def get_args():
     parser.add_argument('--size', type=int,default=128,required=False)
     parser.add_argument('--threads', default=4, type=int, help='# threads for loading data')
 
-    parser.add_argument('--save_dir', type=str, default='./test/', help='save result in this directory')
+    parser.add_argument('--save_dir', type=str, default='../../data/test_obj/', help='save result in this directory')
     parser.add_argument('--checkpoint', type=str, required=False,default='../../weights/checkpoint_leaf/epoch1.pth', help='trained model path ')
 
     args = parser.parse_args()
