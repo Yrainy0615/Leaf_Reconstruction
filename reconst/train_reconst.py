@@ -9,8 +9,8 @@ def get_args():
     parser = argparse.ArgumentParser(description='train leaf reconstruction from a RoI')
     parser.add_argument('--gpu', type=str, default='0', help='ID of GPU (single GPU)')
 
-    parser.add_argument('--dataset', type=str, required=False, default='/home/yyang/projects/konishiike/code/segment/test/crop_sam/001',help='dataset path (img/mask/seg)')
-    parser.add_argument('--obj', type=str, required=False,default='/home/yyang/projects/konishiike/data/synthetic/leaf.obj', help='initial object path')
+    parser.add_argument('--dataset', type=str, required=False, default='../../data/DenseLeaves/crop_leaf/test/crop_sam/001',help='dataset path (img/mask/seg)')
+    parser.add_argument('--obj', type=str, required=False,default='../../data/DenseLeaves/synthetic/leaf.obj', help='initial object path')
     parser.add_argument('--base_x', type=int, default=1024, help='width of bush image')
     parser.add_argument('--base_y', type=int, default=768,help='height of bush image')
     parser.add_argument('--size', type=int, default=256,required=False, help='size of cropped RoI')
@@ -20,7 +20,7 @@ def get_args():
     parser.add_argument('--threads', default=4, type=int)
 
     parser.add_argument('--save_freq', type=int, default=1, help='save mean shape & model')
-    parser.add_argument('--checkpoint', type=str, default='./checkpoint/', help='save in this directory')
+    parser.add_argument('--checkpoint', type=str, default='../../weights/checkpoint_leaf', help='save in this directory')
     args = parser.parse_args()
 
     return args
